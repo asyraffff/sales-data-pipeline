@@ -63,8 +63,6 @@ def clean_and_aggregate(**kwargs):
         # Push cleaned file path via XCom
         ti.xcom_push(key='cleaned_file_path', value=output_path)
 
-        return output_path
-
     except Exception as e:
         logger.exception(f"{tagging} - Transformation error: %s", str(e))
         raise
