@@ -13,7 +13,7 @@ def check_row_count(**kwargs):
     logger.info(f"{tagging} - Running data quality checks...")
 
     ti = kwargs['ti']
-    cleaned_file = ti.xcom_pull(task_ids='transform_task')
+    cleaned_file = ti.xcom_pull(task_ids='transform_task', key='cleaned_file_path')
 
     try:
         df = pd.read_csv(cleaned_file)
