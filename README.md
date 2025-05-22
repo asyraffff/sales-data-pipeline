@@ -11,8 +11,8 @@ This is part of my technical assessment for the Data Engineer role at Yayasan Pe
 The ETL pipeline automates the following tasks:
 - **Extract**: Downloads the latest daily sales data CSV file from an S3 bucket.
 - **Transform**: Cleans and aggregates the data by product category, ensuring consistency and removing invalid records.
-- **Load**: Stores the transformed data in a PostgreSQL database.
 - **Quality Check**: Validates that the transformed data contains at least one row before loading.
+- **Load**: Stores the transformed data in a PostgreSQL database.
 
 The pipeline is orchestrated using Apache Airflow, which ensures reliable scheduling and task dependencies. It is containerized using Docker for easy deployment and reproducibility.
 
